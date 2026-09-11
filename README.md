@@ -28,6 +28,7 @@
 | **What I Build** | AI features inside real products — pipelines, offline apps, editor workflows, automation |
 | **Stack** | Python · Kotlin · TypeScript · Rust · React · FastAPI · LangGraph · Coral |
 | **Open Source** | Coral MCP — contributor · 14 PRs merged |
+| **Closed Source** | Blindfold · Reelforge · ChitraDub · agentic_chat · footprint · scrapper · coral_benchmarks · ghevra |
 
 ---
 
@@ -240,13 +241,6 @@ flowchart TD
 | [ghevra](https://github.com/FiscalMindset/ghevra) | Community transparency portal for Ghevra village — EN / Hindi / Haryanvi | [FiscalMindset](https://github.com/FiscalMindset) |
 | [smart_terminal](https://github.com/algsoch/smart_terminal) | RunAnywhere CommandBrain — offline CLI assistant | [algsoch](https://github.com/algsoch) |
 
-### 🎓 Education & Language Learning
-
-| Project | Description | Account |
-|---------|-------------|:-------:|
-| [english_bot](https://github.com/algsoch/english_bot) | AI conversation practice with speech recognition | [algsoch](https://github.com/algsoch) |
-| [speakai](https://github.com/algsoch/speakai) | On-browser English practice with RunAnywhere WASM | [algsoch](https://github.com/algsoch) |
-
 ### 🏢 Organisation — blindfold-org
 
 First GitHub organisation: [**blindfold-org**](https://github.com/blindfold-org)
@@ -441,47 +435,62 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 ## Skills & Tech Stack
 
-### AI Engineering
+<details open>
+<summary>🤖 <b>AI Engineering</b></summary>
 
-| Category | Technologies |
-|:---------|:------------|
-| **On-Device AI** | RunAnywhere SDK, ONNX Runtime, WebAssembly, SmolLM2, SmolVLM |
-| **LLM & Agents** | LangChain, LangGraph, Prompt Engineering, RAG, Multi-Agent Systems |
-| **Model Ops** | LLM Evaluation, Hallucination Analysis, Response Evaluation |
-| **Vision & Speech** | Whisper, SmolVLM, Image Analysis, OCR, Web Speech API |
+| Focus | Stack |
+|:------|:------|
+| **On-Device AI** | <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">RunAnywhere SDK</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ONNX Runtime</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">WebAssembly</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolLM2</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolVLM</span> |
+| **LLM & Agents** | <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LangChain</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LangGraph</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Prompt Engineering</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">RAG</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Multi-Agent Systems</span> |
+| **Model Ops** | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LLM Evaluation</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Hallucination Analysis</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Response Evaluation</span> |
+| **Vision & Speech** | <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Whisper</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolVLM</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Image Analysis</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OCR</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Web Speech API</span> |
 
-### Development
+</details>
 
-| Category | Technologies |
-|:---------|:------------|
-| **Languages** | Python, Kotlin, JavaScript, TypeScript, SQL, Rust |
-| **Mobile** | Android, Jetpack Compose, React Native |
-| **Frontend** | React, Next.js, Tailwind CSS, Vite, Zustand |
-| **Backend** | FastAPI, SQLAlchemy, Node.js, PostgreSQL, MCP SDK |
+<details open>
+<summary>🛠️ <b>Development</b></summary>
 
-### Infrastructure
+| Focus | Stack |
+|:------|:------|
+| **Languages** | <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Python</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kotlin</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JavaScript</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">TypeScript</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQL</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Rust</span> |
+| **Mobile** | <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Android</span> <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Jetpack Compose</span> <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">React Native</span> |
+| **Frontend** | <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">React</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Next.js</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Tailwind CSS</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Vite</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Zustand</span> |
+| **Backend** | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">FastAPI</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQLAlchemy</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Node.js</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">PostgreSQL</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">MCP SDK</span> |
 
-| Category | Technologies |
-|:---------|:------------|
-| **Orchestration** | Kestra, GitHub Actions, Docker, pnpm monorepos |
-| **Data** | Coral SQL, JSONL, SQLite, OpenMetadata |
-| **Deployment** | Render, Vercel, ngrok, Helm |
+</details>
 
-### Writing
+<details open>
+<summary>☁️ <b>Infrastructure</b></summary>
+
+| Focus | Stack |
+|:------|:------|
+| **Orchestration** | <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kestra</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">GitHub Actions</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Docker</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">pnpm monorepos</span> |
+| **Data** | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Coral SQL</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JSONL</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQLite</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenMetadata</span> |
+| **Deployment** | <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Render</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Vercel</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ngrok</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Helm</span> |
+
+</details>
+
+<details open>
+<summary>✍️ <b>Writing</b></summary>
 
 | Article | Publication |
 |:--------|:------------|
-| [How I Built CareOps Agent with Coral + OpenCode](https://medium.com/@algsoch/how-i-built-careops-agent-with-coral-opencode-338d1238e6ae) | Medium |
-| [Cognivise — Real-Time Cognitive AI Tutor](https://medium.com/@algsoch/cognivise-a-real-time-cognitive-ai-tutor-using-vision-agents-sdk-a33ef92d4666) | Medium |
+| [How I Built CareOps Agent with Coral + OpenCode](https://medium.com/@algsoch/how-i-built-careops-agent-with-coral-opencode-338d1238e6ae) | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Medium</span> |
+| [Cognivise — Real-Time Cognitive AI Tutor](https://medium.com/@algsoch/cognivise-a-real-time-cognitive-ai-tutor-using-vision-agents-sdk-a33ef92d4666) | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Medium</span> |
 
-### IDE & Tools
+</details>
+
+<details open>
+<summary>⚙️ <b>IDE & Tools</b></summary>
 
 | | |
 |:--|:--|
-| **AI Coding** | OpenCode, Codex, AntiGravity, Kimchi, OpenClaw |
-| **Code Editor** | VS Code, Cursor, JetBrains IDEs |
-| **Terminal** | Warp, Hyper, iTerm2 |
-| **Other** | Claude, ChatGPT, Gemini |
+| **AI Coding** | <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenCode</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Codex</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">AntiGravity</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kimchi</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenClaw</span> |
+| **Code Editor** | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">VS Code</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Cursor</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JetBrains IDEs</span> |
+| **Terminal** | <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Warp</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Hyper</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">iTerm2</span> |
+| **Other** | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Claude</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ChatGPT</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Gemini</span> |
+
+</details>
 
 ### Awards & Recognition
 
@@ -503,13 +512,45 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 ## GitHub Stats
 
-| Account | Repos | Stars | PRs Merged | Contributions |
-|:--------|:-----:|:-----:|:----------:|:-------------:|
-| [@FiscalMindset](https://github.com/FiscalMindset) | 56 | 6 | 170+ | — |
-| [@algsoch](https://github.com/algsoch) | 104+ | 24+ | 14 | 350+ |
-| [@blindfold-org](https://github.com/blindfold-org) | 2 | — | — | — |
+<details open>
+<summary>📊 <b>Accounts</b></summary>
+
+| Account | Visibility | Repos | Stars | PRs Merged | Contributions |
+|:--------|:----------:|:-----:|:-----:|:----------:|:-------------:|
+| [@FiscalMindset](https://github.com/FiscalMindset) | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">public + private</span> | 56 | 6 | 170+ | — |
+| [@algsoch](https://github.com/algsoch) | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">open source</span> | 104+ | 24+ | 14 | 350+ |
+| [@blindfold-org](https://github.com/blindfold-org) | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">private</span> | 2 | — | — | — |
+
+</details>
+
+<details open>
+<summary>🔒 <b>Closed-Source Projects</b></summary>
+
+| Category | Project | Description |
+|:---------|:--------|:------------|
+| 🛡️ **Security & Privacy** | [Blindfold](https://github.com/blindfold-org/Blindfold) | TDX enclave secrets wrapper — AI agents never see the keys |
+| 🎥 **Media & Video** | [Reelforge](https://github.com/FiscalMindset/video) · [ChitraDub](https://github.com/FiscalMindset/chitradub) | AI-native video editor · dubbing pipeline in 12 languages |
+| 🤖 **Agentic AI** | [agentic_chat](https://github.com/FiscalMindset/agentic_chat) · [vickykumar](https://github.com/FiscalMindset/vickykumar) | Session history + dashboard · personal AI chatbot |
+| 🧪 **Data & Analytics** | [footprint](https://github.com/FiscalMindset/footprint) · [coral_benchmarks](https://github.com/FiscalMindset/coral_benchmarks) | Local-first digital-footprint analytics · Coral query benchmarks |
+| 🛠️ **Developer Tooling** | [scrapper](https://github.com/FiscalMindset/scrapper) | Scrape-Verse Sentinel — self-healing web context for coding agents |
+| 🌐 **Web & Community** | [ghevra](https://github.com/FiscalMindset/ghevra) | Community transparency portal — EN / Hindi / Haryanvi |
+
+</details>
+
+<details open>
+<summary>🏆 <b>Achievements</b></summary>
+
+<table>
+<tr align="center">
+<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=FiscalMindset&show_icons=true&theme=radical&hide_title=true" alt="FiscalMindset stats"/></td>
+<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=algsoch&show_icons=true&theme=radical&hide_title=true" alt="algsoch stats"/></td>
+<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=blindfold-org&show_icons=true&theme=radical&hide_title=true" alt="blindfold-org stats"/></td>
+</tr>
+</table>
 
 **🏆 Pull Shark x3** (@FiscalMindset opened pull requests that have been merged) · **YOLO** · **Quickdraw** (< 5 min merge)
+
+</details>
 
 ---
 
