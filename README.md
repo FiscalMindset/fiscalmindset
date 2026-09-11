@@ -14,7 +14,7 @@
   </div>
 
   <p style="font-size: 16px; color: #6e7681; max-width: 650px; line-height: 1.6;">
-    Building <strong>agentic AI systems</strong>, <strong>open-source integrations</strong>, and <strong>real-world automation tools</strong>.
+    Shipping <strong>real AI</strong>, not demos — <strong>on-device agents</strong>, <strong>MCP-powered products</strong>, and <strong>12-language dubbing</strong>.
   </p>
 </div>
 
