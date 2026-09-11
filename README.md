@@ -154,10 +154,10 @@ flowchart LR
 ### 🛡️ Secrets Security — Blindfold
 
 [**Blindfold**](https://github.com/blindfold-org/Blindfold) — [blindfold-org](https://github.com/blindfold-org) · Live: [blindfold-rho.vercel.app](https://blindfold-rho.vercel.app/)
-- **Your AI agent can't leak the API key it never had** — TDX enclave wrapper
+- **TDX enclave wrapper — AI agents never see or leak the keys they use**
 - Seal and use API keys inside a trusted execution enclave
 - No-paste workflow — verify by fingerprint, never write keys to disk
-- Built with **TypeScript** · Terminal 3 TDX enclave integration
+- Built with **TypeScript + Rust (WASM contract)** · Terminal 3 Intel TDX enclave integration
 
 ---
 
@@ -345,7 +345,7 @@ flowchart TD
 
 ### 🛡️ Blindfold — TDX Secrets Wrapper
 
-[**Blindfold**](https://github.com/blindfold-org/Blindfold) — seal API keys into a **Terminal 3 Intel TDX enclave**, then hand your agent an un-leakable sentinel instead of the real key. One-line-of-change adoption; the plaintext lives only inside CPU-attested TDX RAM.
+[**Blindfold**](https://github.com/blindfold-org/Blindfold) — **TDX enclave wrapper — AI agents never see or leak the keys they use.** Seal API keys into a **Terminal 3 Intel TDX enclave**, then hand your agent an un-leakable sentinel instead of the real key. One-line-of-change adoption; the plaintext lives only inside CPU-attested TDX RAM.
 
 **The exact workflow (install → login → seal → agent uses it):**
 
@@ -370,7 +370,7 @@ flowchart LR
         ENV[".env<br/>no API keys after register"]
         AGENT["AI agent<br/>no keys in env · process · context"]
         CHAT["@blindfold/chatbot<br/>rule-based · audience-aware<br/>REPL · web · API"]
-        CLI["blindfold CLI<br/>signup · login · register · use · proxy<br/>attest · doctor · rotate · migrate"]
+        CLI["blindfold CLI + proxy<br/>signup · login · register · use · proxy<br/>attest · doctor · rotate · migrate"]
     end
 
     subgraph T3["🛡️ Terminal 3 — Intel TDX trust domain"]
@@ -384,10 +384,13 @@ flowchart LR
     API["api.openai.com · Anthropic<br/>GitHub · AWS SES/S3 · smtp.gmail.com …"]
 
     ENV -->|"one-time seal · registerSecret → seedSecret"| CLI
-    AGENT -->|"Authorization: Bearer &lt;sentinel&gt;"| CLI
+    AGENT -->|"request · Bearer &lt;sentinel&gt; (no key)"| CLI
     CHAT -->|"dogfoods proxy + sentinel"| CLI
-    CLI -->|"authenticated T3 transport"| FW
-    FW -->|"Bearer · Basic · SigV4 headers"| API
+    CLI -->|"invokeForward · authenticated T3"| FW
+    FW -->|"swaps in real key · calls API"| API
+    API -->|"API response"| FW
+    FW -->|"output (key never leaks)"| CLI
+    CLI -->|"returns output to agent"| AGENT
 ```
 
 ### 🤖 vickykumar — algsoch personal AI
