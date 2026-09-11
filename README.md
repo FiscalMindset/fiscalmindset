@@ -24,22 +24,10 @@
 
 | | |
 |:--|:--|
-| **Who** | Open Source AI Engineer — open-source-first: Coral MCP, Blindfold, tooling for AI agents |
+| **Who** | Open Source AI Engineer — Coral MCP contributor, agent tooling, real-world products |
 | **What I Build** | AI features inside real products — pipelines, offline apps, editor workflows, automation |
 | **Stack** | Python · Kotlin · TypeScript · Rust · React · FastAPI · LangGraph · Coral |
-| **Open Source** | Coral MCP · Blindfold (TDX) · Reelforge — contributor & maintainer |
-
-Achievements: **Pull Shark x3** · YOLO · Quickdraw
----
-
-## Philosophy
-
-> "Build things that work in the real world. If it doesn't ship, it doesn't count."
-
-- **Open by default** — every meaningful tool gets a public repo.
-- **Utility over novelty** — if it can't be used, it's not a win.
-- **AI inside real products** — the model is a component, not the product.
-- **Maintainable > clever** — boring, reliable code outlives clever tricks.
+| **Open Source** | Coral MCP · Reelforge — contributor & maintainer |
 
 ---
 
