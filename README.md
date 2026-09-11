@@ -27,7 +27,7 @@
 | **Who** | Open Source AI Engineer — Coral MCP contributor, agent tooling, real-world products |
 | **What I Build** | AI features inside real products — pipelines, offline apps, editor workflows, automation |
 | **Stack** | Python · Kotlin · TypeScript · Rust · React · FastAPI · LangGraph · Coral |
-| **Open Source** | Coral MCP · Reelforge — contributor & maintainer |
+| **Open Source** | Coral MCP — contributor · 14 PRs merged |
 
 ---
 
