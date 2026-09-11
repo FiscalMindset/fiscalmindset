@@ -634,7 +634,7 @@ export function GitHubIntelligenceSection() {
                 <div className="grid gap-2 sm:grid-cols-3">
                   {[
                     {
-                      name: "Pull Shark x2", desc: "Level 2 — 19 PRs across Coral MCP",
+                      name: "Pull Shark x3", desc: "@FiscalMindset opened pull requests that have been merged",
                       img: "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png"
                     },
                     {

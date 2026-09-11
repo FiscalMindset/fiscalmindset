@@ -31,7 +31,7 @@
 | **Stack** | Python · Kotlin · TypeScript · LangGraph · RunAnywhere SDK · Coral |
 | **Open Source** | 14 PRs merged · 20 open · 6 approved — Coral MCP |
 
-| **Achievements** | Pull Shark (170+ PRs merged) · YOLO · Quickdraw (< 5 min merge) |
+| **Achievements** | Pull Shark x3 @FiscalMindset opened pull requests that have been merged · YOLO · Quickdraw (< 5 min merge) |
 ---
 
 ## Philosophy
@@ -50,6 +50,45 @@
 
 ## Featured Projects
 
+### 🛡️ Secrets Security — Blindfold
+
+[**Blindfold**](https://github.com/blindfold-org/Blindfold) — [blindfold-org](https://github.com/blindfold-org) · Live: [blindfold-rho.vercel.app](https://blindfold-rho.vercel.app/)
+- **TDX enclave wrapper — AI agents never see or leak the keys they use**
+- Seal and use API keys inside a trusted execution enclave
+- No-paste workflow — verify by fingerprint, never write keys to disk
+- Built with **TypeScript + Rust (WASM contract)** · Terminal 3 Intel TDX enclave integration
+
+```mermaid
+flowchart LR
+    subgraph DEV["Developer machine — UNTRUSTED"]
+        ENV[".env<br/>no API keys after register"]
+        AGENT["AI agent<br/>no keys in env · process · context"]
+        CHAT["@blindfold/chatbot<br/>rule-based · audience-aware<br/>REPL · web · API"]
+        CLI["blindfold CLI + proxy<br/>signup · login · register · use · proxy<br/>attest · doctor · rotate · migrate"]
+    end
+
+    subgraph T3["🛡️ Terminal 3 — Intel TDX trust domain"]
+        KV["Sealed KV map z:&lt;tenant_did&gt;:secrets<br/>gmail · openai · github · twilio · aws …<br/>encrypted at rest in TDX RAM"]
+        FW["contract/src/forward.rs · Rust → WASM<br/>kv::get(secret_key) → substitutes<br/>SENTINEL → secret → http::call"]
+        ATTEST["TDX attestation<br/>Intel root CA · RTMR3 · --pin gate"]
+        FW -->|"reads sealed secret"| KV
+        ATTEST -.->|"verifies quote"| FW
+    end
+
+    API["api.openai.com · Anthropic<br/>GitHub · AWS SES/S3 · smtp.gmail.com …"]
+
+    ENV -->|"one-time seal · registerSecret → seedSecret"| CLI
+    AGENT -->|"request · Bearer &lt;sentinel&gt; (no key)"| CLI
+    CHAT -->|"dogfoods proxy + sentinel"| CLI
+    CLI -->|"invokeForward · authenticated T3"| FW
+    FW -->|"swaps in real key · calls API"| API
+    API -->|"API response"| FW
+    FW -->|"output (key never leaks)"| CLI
+    CLI -->|"returns output to agent"| AGENT
+```
+
+---
+
 ### 🏆 On-Device AI Learning — algsoch
 
 [**algsoch**](https://github.com/FiscalMindset/algsoch) — Android AI Study Companion
@@ -64,6 +103,45 @@ graph LR
     A[User Question] --> B[RunAnywhere SDK]
     B --> C[SmolLM2-360M<br/>On-Device LLM]
     C --> D[AI Response<br/>Mode-Adapted]
+```
+
+---
+
+### 🎬 Video Dubbing — ChitraDub
+
+[**chitradub**](https://github.com/FiscalMindset/chitradub) — Open-Source Video Dubbing Pipeline
+- Paste a **YouTube URL** or upload a video → get a **dubbed MP4 + SRT** back
+- **12 target languages** across **5 source languages** — powered by AI4Bharat
+- Full **12-stage pipeline** with CI, Docker, Release, and pre-commit automation
+- Built with **Python** + **Next.js 15** + **FastAPI** + **Postgres**
+
+```mermaid
+flowchart LR
+    A[YouTube URL / Upload] --> B[Transcription]
+    B --> C[Translation]
+    C --> D[TTS Synthesis]
+    D --> E[Timing / Subtitle Sync]
+    E --> F[Dubbed MP4 + SRT]
+```
+
+---
+
+### 🎥 AI-Native Video Editor — Reelforge
+
+[**video (Reelforge)**](https://github.com/FiscalMindset/video) — AI-Native Web Video Editor
+- **Edit by intention** — timeline project JSON is the single source of truth; the MP4 is a derivative
+- **AI operates like a power user** — same typed operation union + allow-list, validated as a single transactional, undoable edit
+- **Non-destructive always** — every edit reversible; professional NLE depth (multi-track, trim, split, ripple, keyframes, captions, transitions)
+- Built with **TypeScript (React + Vite)** + **FastAPI** + **PostgreSQL** · pnpm monorepo + MCP server
+
+```mermaid
+flowchart LR
+    Project[(Project JSON<br/>single source of truth)] --> Preview[Preview Renderer]
+    Project --> Export[Export Renderer]
+    Project --> AI[AI Agent<br/>same op union + allow-list]
+    Project --> Collab[Collab Engine]
+    Preview --> Pixels[Live Pixels]
+    Export --> MP4[Master MP4]
 ```
 
 ---
@@ -132,70 +210,6 @@ flowchart TD
 
 ---
 
-### 🎬 Video Dubbing — ChitraDub
-
-[**chitradub**](https://github.com/FiscalMindset/chitradub) — Open-Source Video Dubbing Pipeline
-- Paste a **YouTube URL** or upload a video → get a **dubbed MP4 + SRT** back
-- **12 target languages** across **5 source languages** — powered by AI4Bharat
-- Full **12-stage pipeline** with CI, Docker, Release, and pre-commit automation
-- Built with **Python** + **Next.js 15** + **FastAPI** + **Postgres**
-
-```mermaid
-flowchart LR
-    A[YouTube URL / Upload] --> B[Transcription]
-    B --> C[Translation]
-    C --> D[TTS Synthesis]
-    D --> E[Timing / Subtitle Sync]
-    E --> F[Dubbed MP4 + SRT]
-```
-
----
-
-### 🛡️ Secrets Security — Blindfold
-
-[**Blindfold**](https://github.com/blindfold-org/Blindfold) — [blindfold-org](https://github.com/blindfold-org) · Live: [blindfold-rho.vercel.app](https://blindfold-rho.vercel.app/)
-- **TDX enclave wrapper — AI agents never see or leak the keys they use**
-- Seal and use API keys inside a trusted execution enclave
-- No-paste workflow — verify by fingerprint, never write keys to disk
-- Built with **TypeScript + Rust (WASM contract)** · Terminal 3 Intel TDX enclave integration
-
----
-
-### 🎓 Voice & Command Systems
-
-[**CommandBrain**](https://github.com/algsoch/smart_terminal) — RunAnywhere Command Memory
-- **Offline-first** command copilot that turns natural language into reusable shell commands
-- Local command memory stored in IndexedDB — favorites, macros, reminders, patterns
-- Safety classification with simulate/real execution modes
-- Built with **React + TypeScript + RunAnywhere Web SDK**
-- [Live Demo](https://smart-terminal.onrender.com) · [YouTube](https://www.youtube.com/shorts/mMPo7_v08pE)
-
-```mermaid
-flowchart LR
-    A[Natural Language] --> B[RunAnywhere SDK]
-    B --> C[Command Generator]
-    C --> D[Safety Classifier]
-    D --> E[IndexedDB Memory]
-    D --> F[Execute/Simulate]
-```
-
-[**SpeakAI**](https://github.com/algsoch/speakai) — Local English Practice
-- **100% on-device** English speaking practice via RunAnywhere Web SDK + llama.cpp WASM
-- Browser speech immediately OR optional one-time local model download
-- Personality + practice modes with text + voice responses
-- No API keys, no server dependency
-- [Live Demo](https://speakai-af1l.onrender.com)
-
----
-
-### 🎓 Education & Language Learning
-
-| Project | Description | Account |
-|---------|-------------|:-------:|
-| [english_bot](https://github.com/algsoch/english_bot) | AI conversation practice with speech recognition | [algsoch](https://github.com/algsoch) |
-
----
-
 ## All Projects
 
 ### 📱 Mobile AI (On-Device)
@@ -220,7 +234,7 @@ flowchart LR
 | Project | Description | Account |
 |---------|-------------|:-------:|
 | [chitradub](https://github.com/FiscalMindset/chitradub) | Video dubbing pipeline — YouTube URL/upload → dubbed MP4 + SRT | [FiscalMindset](https://github.com/FiscalMindset) |
-| [video](https://github.com/FiscalMindset/video) | Reelforge — AI-native web video editor with timeline-based AI agent | [FiscalMindset](https://github.com/FiscalMindset) |
+| [video](https://github.com/FiscalMindset/video) | Reelforge — AI-native web video editor (timeline project model = source of truth, pnpm monorepo + MCP server) | [FiscalMindset](https://github.com/FiscalMindset) |
 
 ### 🛡️ Security & Privacy
 
@@ -241,7 +255,6 @@ flowchart LR
 | Project | Description | Account |
 |---------|-------------|:-------:|
 | [ghevra](https://github.com/FiscalMindset/ghevra) | Community transparency portal for Ghevra village — EN / Hindi / Haryanvi | [FiscalMindset](https://github.com/FiscalMindset) |
-| [polybazar](https://github.com/algsoch/polybazar) | E-commerce platform | [algsoch](https://github.com/algsoch) |
 | [smart_terminal](https://github.com/algsoch/smart_terminal) | RunAnywhere CommandBrain — offline CLI assistant | [algsoch](https://github.com/algsoch) |
 
 ### 🎓 Education & Language Learning
@@ -458,18 +471,18 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 | Category | Technologies |
 |:---------|:------------|
-| **Languages** | Python, Kotlin, JavaScript, TypeScript, SQL |
+| **Languages** | Python, Kotlin, JavaScript, TypeScript, SQL, Rust |
 | **Mobile** | Android, Jetpack Compose, React Native |
-| **Frontend** | React, Next.js, Tailwind CSS, Vite |
-| **Backend** | FastAPI, Node.js, PostgreSQL |
+| **Frontend** | React, Next.js, Tailwind CSS, Vite, Zustand |
+| **Backend** | FastAPI, SQLAlchemy, Node.js, PostgreSQL, MCP SDK |
 
 ### Infrastructure
 
 | Category | Technologies |
 |:---------|:------------|
-| **Orchestration** | Kestra, GitHub Actions, Docker |
+| **Orchestration** | Kestra, GitHub Actions, Docker, pnpm monorepos |
 | **Data** | Coral SQL, JSONL, SQLite, OpenMetadata |
-| **Deployment** | Render, Vercel, ngrok |
+| **Deployment** | Render, Vercel, ngrok, Helm |
 
 ### Writing
 
@@ -492,7 +505,7 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 | Achievement | Details |
 |:------------|:--------|
 | **Coral Hackathon Track 2** | 1st place — CareOps agent with 9 Coral sources |
-| **Pull Shark** | 170+ PRs merged on GitHub (14 to Coral MCP) |
+| **Pull Shark** | Pull Shark x3 — @FiscalMindset opened pull requests that have been merged |
 | **YOLO** | Fast merge achievement |
 | **Quickdraw** | < 5 min merge time |
 
@@ -513,7 +526,7 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 | [@algsoch](https://github.com/algsoch) | 104+ | 24+ | 14 | 350+ |
 | [@blindfold-org](https://github.com/blindfold-org) | 2 | — | — | — |
 
-**🏆 Pull Shark** (170+ PRs merged) · **YOLO** · **Quickdraw** (< 5 min merge)
+**🏆 Pull Shark x3** (@FiscalMindset opened pull requests that have been merged) · **YOLO** · **Quickdraw** (< 5 min merge)
 
 ---
 
@@ -523,11 +536,10 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 | Project | Impact | Link |
 |:--------|:-------|:-----|
-| 🎬 **ChitraDub** | YouTube URL / upload → dubbed MP4 + SRT in 12 languages | [GitHub](https://github.com/FiscalMindset/chitradub) |
 | 🛡️ **Blindfold** | AI agents never touch the API keys they use — TDX enclave | [Live](https://blindfold-rho.vercel.app/) |
 | 🤖 **algsoch (AI)** | Personal AI chatbot trained on your digital footprint | [Live](https://algsoch.com/) |
-| 🧠 **CommandBrain** | Offline-first command memory + execution copilot, IndexedDB storage | [Live Demo](https://smart-terminal.onrender.com) |
-| 🎙️ **SpeakAI** | 100% on-device English practice via RunAnywhere WASM | [Live Demo](https://speakai-af1l.onrender.com) |
+| 🎬 **ChitraDub** | YouTube URL / upload → dubbed MP4 + SRT in 12 languages | [GitHub](https://github.com/FiscalMindset/chitradub) |
+| 🎥 **Reelforge (video)** | AI-native video editor — timeline project model = source of truth | [GitHub](https://github.com/FiscalMindset/video) |
 | 📱 **algsoch Android** | 100% offline AI, 7 learning modes, RunAnywhere SDK | [GitHub](https://github.com/FiscalMindset/algsoch) |
 | 📺 **algsochnews** | 5-agent pipeline → broadcast video from any article URL | [Live Demo](https://algsochnews-1.onrender.com) |
 | 🏥 **careops** | 9 data sources joined via Coral SQL for family care coordination | [GitHub](https://github.com/FiscalMindset/careops) |
