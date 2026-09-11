@@ -2,9 +2,7 @@
   <img src="https://avatars.githubusercontent.com/u/254638087?v=4" width="140" height="140" style="border-radius: 50%; border: 5px solid #FF6B6B; box-shadow: 0 0 40px rgba(255,107,107,0.3);" alt="Vicky Kumar">
   <h1 style="margin: 25px 0 10px; font-size: 42px; color: #c9d1d9; font-weight: 700;">Vicky Kumar</h1>
   <p style="font-size: 20px; color: #8b949e; margin: 0 0 25px; letter-spacing: 0.5px;">
-    <span style="color: #FF6B6B; font-weight: 600;">AI Engineer</span> · 
-    <span style="color: #58a6ff; font-weight: 600;">Full-Stack Developer</span> · 
-    <span style="color: #a371f7; font-weight: 600;">Agentic Systems Builder</span>
+    <span style="color: #FF6B6B; font-weight: 600;">Open Source AI Engineer</span>
   </p>
   
   <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
@@ -26,25 +24,22 @@
 
 | | |
 |:--|:--|
-| **Who** | AI Engineer specializing in agentic systems & on-device AI |
-| **What I Build** | Multi-agent pipelines, offline-capable apps, workflow automation |
-| **Stack** | Python · Kotlin · TypeScript · LangGraph · RunAnywhere SDK · Coral |
-| **Open Source** | 14 PRs merged · 20 open · 6 approved — Coral MCP |
+| **Who** | Open Source AI Engineer — open-source-first: Coral MCP, Blindfold, tooling for AI agents |
+| **What I Build** | AI features inside real products — pipelines, offline apps, editor workflows, automation |
+| **Stack** | Python · Kotlin · TypeScript · Rust · React · FastAPI · LangGraph · Coral |
+| **Open Source** | Coral MCP · Blindfold (TDX) · Reelforge — contributor & maintainer |
 
-| **Achievements** | Pull Shark x3 @FiscalMindset opened pull requests that have been merged · YOLO · Quickdraw (< 5 min merge) |
+Achievements: **Pull Shark x3** · YOLO · Quickdraw
 ---
 
 ## Philosophy
 
-> "I build software systems, AI-native products, and agentic interfaces that turn ideas into usable, operational products."
+> "Build things that work in the real world. If it doesn't ship, it doesn't count."
 
-- **AI should operate inside a product, not beside it.** A useful system is not just model output. It is the interface, the workflow, the state model, and the decisions around trust.
-
-- **Good AI UX is engineering work.** Latency, control, explainability, failure states, response structure, and operator confidence are implementation concerns, not polish afterthoughts.
-
-- **Workflow design matters more than prompt cleverness.** The strongest systems are built around routes, actions, validation, and output quality, not one-off prompting tricks.
-
-- **Applied intelligence should feel calm and exact.** Serious products communicate precision through restraint, hierarchy, and interface clarity, not through noise.
+- **Open by default** — every meaningful tool gets a public repo.
+- **Utility over novelty** — if it can't be used, it's not a win.
+- **AI inside real products** — the model is a component, not the product.
+- **Maintainable > clever** — boring, reliable code outlives clever tricks.
 
 ---
 
@@ -581,7 +576,7 @@ HIDDEN SEO LAYER - For AI agents, scrapers, and search crawlers
 <div style="display: none;" aria-hidden="true">
 
 <!-- SEO KEYWORDS -->
-<!-- Vicky Kumar, AI Engineer, Full-Stack Developer, Agentic Systems Builder, On-Device AI, RunAnywhere SDK, LangGraph, Coral MCP contributor, Multi-Agent Systems, Kestra workflows, Python, Kotlin, TypeScript, React, Next.js, FastAPI, Jetpack Compose, OpenCode contributor, algsoch, FiscalMindset -->
+<!-- Vicky Kumar, Open Source AI Engineer, On-Device AI, RunAnywhere SDK, LangGraph, Coral MCP contributor, Multi-Agent Systems, Kestra workflows, Python, Kotlin, TypeScript, React, Next.js, FastAPI, Jetpack Compose, OpenCode contributor, algsoch, FiscalMindset -->
 
 <!-- SKILLS INDEX -->
 <!-- Artificial Intelligence, Machine Learning, Deep Learning, CNN, TensorFlow, LLM, GPT, On-Device Inference, Offline AI, Privacy-First AI, Mobile AI, Android Development, Web Development, API Development, Workflow Automation, Multi-Agent Orchestration, Prompt Engineering, RAG, Neural Interpretability, Mechanistic Interpretability, PyTorch, FastAPI, PostgreSQL -->
