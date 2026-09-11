@@ -435,62 +435,111 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 ## Skills & Tech Stack
 
-<details open>
-<summary>🤖 <b>AI Engineering</b></summary>
+### 🤖 AI Engineering
 
-| Focus | Stack |
-|:------|:------|
-| **On-Device AI** | <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">RunAnywhere SDK</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ONNX Runtime</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">WebAssembly</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolLM2</span> <span style="background:#0d1117;color:#58a6ff;border:1px solid #58a6ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolVLM</span> |
-| **LLM & Agents** | <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LangChain</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LangGraph</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Prompt Engineering</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">RAG</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Multi-Agent Systems</span> |
-| **Model Ops** | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">LLM Evaluation</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Hallucination Analysis</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Response Evaluation</span> |
-| **Vision & Speech** | <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Whisper</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SmolVLM</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Image Analysis</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OCR</span> <span style="background:#0d1117;color:#f778ba;border:1px solid #f778ba;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Web Speech API</span> |
+**On-Device AI**
+![RunAnywhere SDK](https://img.shields.io/badge/RunAnywhere%20SDK-58A6FF?style=flat-square)
+![ONNX Runtime](https://img.shields.io/badge/ONNX%20Runtime-58A6FF?style=flat-square)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-58A6FF?style=flat-square&logo=webassembly&logoColor=white)
+![SmolLM2](https://img.shields.io/badge/SmolLM2-58A6FF?style=flat-square)
+![SmolVLM](https://img.shields.io/badge/SmolVLM-58A6FF?style=flat-square)
 
-</details>
+**LLM & Agents**
+![LangChain](https://img.shields.io/badge/LangChain-A371F7?style=flat-square)
+![LangGraph](https://img.shields.io/badge/LangGraph-A371F7?style=flat-square)
+![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-A371F7?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-A371F7?style=flat-square)
+![Multi-Agent Systems](https://img.shields.io/badge/Multi--Agent%20Systems-A371F7?style=flat-square)
 
-<details open>
-<summary>🛠️ <b>Development</b></summary>
+**Model Ops**
+![LLM Evaluation](https://img.shields.io/badge/LLM%20Evaluation-3FB950?style=flat-square)
+![Hallucination Analysis](https://img.shields.io/badge/Hallucination%20Analysis-3FB950?style=flat-square)
+![Response Evaluation](https://img.shields.io/badge/Response%20Evaluation-3FB950?style=flat-square)
 
-| Focus | Stack |
-|:------|:------|
-| **Languages** | <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Python</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kotlin</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JavaScript</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">TypeScript</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQL</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Rust</span> |
-| **Mobile** | <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Android</span> <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Jetpack Compose</span> <span style="background:#0d1117;color:#7ee787;border:1px solid #7ee787;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">React Native</span> |
-| **Frontend** | <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">React</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Next.js</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Tailwind CSS</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Vite</span> <span style="background:#0d1117;color:#56d4dd;border:1px solid #56d4dd;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Zustand</span> |
-| **Backend** | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">FastAPI</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQLAlchemy</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Node.js</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">PostgreSQL</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">MCP SDK</span> |
+**Vision & Speech**
+![Whisper](https://img.shields.io/badge/Whisper-F778BA?style=flat-square)
+![SmolVLM](https://img.shields.io/badge/SmolVLM-F778BA?style=flat-square)
+![Image Analysis](https://img.shields.io/badge/Image%20Analysis-F778BA?style=flat-square)
+![OCR](https://img.shields.io/badge/OCR-F778BA?style=flat-square)
+![Web Speech API](https://img.shields.io/badge/Web%20Speech%20API-F778BA?style=flat-square)
 
-</details>
+### 🛠️ Development
 
-<details open>
-<summary>☁️ <b>Infrastructure</b></summary>
+**Languages**
+![Python](https://img.shields.io/badge/Python-79C0FF?style=flat-square&logo=python&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-79C0FF?style=flat-square&logo=kotlin&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-79C0FF?style=flat-square&logo=javascript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-79C0FF?style=flat-square&logo=typescript&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-79C0FF?style=flat-square)
+![Rust](https://img.shields.io/badge/Rust-79C0FF?style=flat-square&logo=rust&logoColor=white)
 
-| Focus | Stack |
-|:------|:------|
-| **Orchestration** | <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kestra</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">GitHub Actions</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Docker</span> <span style="background:#0d1117;color:#d2a8ff;border:1px solid #d2a8ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">pnpm monorepos</span> |
-| **Data** | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Coral SQL</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JSONL</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">SQLite</span> <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenMetadata</span> |
-| **Deployment** | <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Render</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Vercel</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ngrok</span> <span style="background:#0d1117;color:#ffa657;border:1px solid #ffa657;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Helm</span> |
+**Mobile**
+![Android](https://img.shields.io/badge/Android-7EE787?style=flat-square&logo=android&logoColor=white)
+![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-7EE787?style=flat-square)
+![React Native](https://img.shields.io/badge/React%20Native-7EE787?style=flat-square&logo=react&logoColor=white)
 
-</details>
+**Frontend**
+![React](https://img.shields.io/badge/React-56D4DD?style=flat-square&logo=react&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-56D4DD?style=flat-square&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-56D4DD?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-56D4DD?style=flat-square&logo=vite&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-56D4DD?style=flat-square)
 
-<details open>
-<summary>✍️ <b>Writing</b></summary>
+**Backend**
+![FastAPI](https://img.shields.io/badge/FastAPI-FF7B72?style=flat-square&logo=fastapi&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-FF7B72?style=flat-square)
+![Node.js](https://img.shields.io/badge/Node.js-FF7B72?style=flat-square&logo=nodedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-FF7B72?style=flat-square&logo=postgresql&logoColor=white)
+![MCP SDK](https://img.shields.io/badge/MCP%20SDK-FF7B72?style=flat-square)
 
-| Article | Publication |
-|:--------|:------------|
-| [How I Built CareOps Agent with Coral + OpenCode](https://medium.com/@algsoch/how-i-built-careops-agent-with-coral-opencode-338d1238e6ae) | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Medium</span> |
-| [Cognivise — Real-Time Cognitive AI Tutor](https://medium.com/@algsoch/cognivise-a-real-time-cognitive-ai-tutor-using-vision-agents-sdk-a33ef92d4666) | <span style="background:#0d1117;color:#e3b341;border:1px solid #e3b341;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Medium</span> |
+### ☁️ Infrastructure
 
-</details>
+**Orchestration**
+![Kestra](https://img.shields.io/badge/Kestra-D2A8FF?style=flat-square)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-D2A8FF?style=flat-square&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-D2A8FF?style=flat-square&logo=docker&logoColor=white)
+![pnpm monorepos](https://img.shields.io/badge/pnpm%20monorepos-D2A8FF?style=flat-square)
 
-<details open>
-<summary>⚙️ <b>IDE & Tools</b></summary>
+**Data**
+![Coral SQL](https://img.shields.io/badge/Coral%20SQL-E3B341?style=flat-square)
+![JSONL](https://img.shields.io/badge/JSONL-E3B341?style=flat-square)
+![SQLite](https://img.shields.io/badge/SQLite-E3B341?style=flat-square&logo=sqlite&logoColor=white)
+![OpenMetadata](https://img.shields.io/badge/OpenMetadata-E3B341?style=flat-square)
 
-| | |
-|:--|:--|
-| **AI Coding** | <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenCode</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Codex</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">AntiGravity</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Kimchi</span> <span style="background:#0d1117;color:#79c0ff;border:1px solid #79c0ff;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">OpenClaw</span> |
-| **Code Editor** | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">VS Code</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Cursor</span> <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">JetBrains IDEs</span> |
-| **Terminal** | <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Warp</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Hyper</span> <span style="background:#0d1117;color:#a371f7;border:1px solid #a371f7;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">iTerm2</span> |
-| **Other** | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Claude</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">ChatGPT</span> <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">Gemini</span> |
+**Deployment**
+![Render](https://img.shields.io/badge/Render-FFA657?style=flat-square&logo=render&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-FFA657?style=flat-square&logo=vercel&logoColor=white)
+![ngrok](https://img.shields.io/badge/ngrok-FFA657?style=flat-square)
+![Helm](https://img.shields.io/badge/Helm-FFA657?style=flat-square)
 
-</details>
+### ✍️ Writing
+
+[![CareOps Agent with Coral + OpenCode](https://img.shields.io/badge/How%20I%20Built%20CareOps%20Agent%20with%20Coral%20%2B%20OpenCode-E3B341?style=flat-square)](https://medium.com/@algsoch/how-i-built-careops-agent-with-coral-opencode-338d1238e6ae)
+[![Cognivise — Real-Time Cognitive AI Tutor](https://img.shields.io/badge/Cognivise%20%E2%80%94%20Real--Time%20Cognitive%20AI%20Tutor-E3B341?style=flat-square)](https://medium.com/@algsoch/cognivise-a-real-time-cognitive-ai-tutor-using-vision-agents-sdk-a33ef92d4666)
+
+### ⚙️ IDE & Tools
+
+**AI Coding**
+![OpenCode](https://img.shields.io/badge/OpenCode-79C0FF?style=flat-square)
+![Codex](https://img.shields.io/badge/Codex-79C0FF?style=flat-square)
+![AntiGravity](https://img.shields.io/badge/AntiGravity-79C0FF?style=flat-square)
+![Kimchi](https://img.shields.io/badge/Kimchi-79C0FF?style=flat-square)
+![OpenClaw](https://img.shields.io/badge/OpenClaw-79C0FF?style=flat-square)
+
+**Code Editor**
+![VS Code](https://img.shields.io/badge/VS%20Code-FF7B72?style=flat-square)
+![Cursor](https://img.shields.io/badge/Cursor-FF7B72?style=flat-square)
+![JetBrains IDEs](https://img.shields.io/badge/JetBrains%20IDEs-FF7B72?style=flat-square)
+
+**Terminal**
+![Warp](https://img.shields.io/badge/Warp-A371F7?style=flat-square)
+![Hyper](https://img.shields.io/badge/Hyper-A371F7?style=flat-square)
+![iTerm2](https://img.shields.io/badge/iTerm2-A371F7?style=flat-square)
+
+**Other**
+![Claude](https://img.shields.io/badge/Claude-3FB950?style=flat-square)
+![ChatGPT](https://img.shields.io/badge/ChatGPT-3FB950?style=flat-square&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-3FB950?style=flat-square)
 
 ### Awards & Recognition
 
@@ -517,9 +566,9 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 | Account | Visibility | Repos | Stars | PRs Merged | Contributions |
 |:--------|:----------:|:-----:|:-----:|:----------:|:-------------:|
-| [@FiscalMindset](https://github.com/FiscalMindset) | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">public + private</span> | 56 | 6 | 170+ | — |
-| [@algsoch](https://github.com/algsoch) | <span style="background:#0d1117;color:#3fb950;border:1px solid #3fb950;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">open source</span> | 104+ | 24+ | 14 | 350+ |
-| [@blindfold-org](https://github.com/blindfold-org) | <span style="background:#0d1117;color:#ff7b72;border:1px solid #ff7b72;border-radius:12px;padding:2px 10px;margin:2px;font-size:12px;">private</span> | 2 | — | — | — |
+| [@FiscalMindset](https://github.com/FiscalMindset) | ![public + private](https://img.shields.io/badge/public%20%2B%20private-3FB950?style=flat-square) | 56 | 6 | 170+ | — |
+| [@algsoch](https://github.com/algsoch) | ![open source](https://img.shields.io/badge/open%20source-3FB950?style=flat-square) | 104+ | 24+ | 14 | 350+ |
+| [@blindfold-org](https://github.com/blindfold-org) | ![private](https://img.shields.io/badge/private-FF7B72?style=flat-square) | 2 | — | — | — |
 
 </details>
 
@@ -540,15 +589,10 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 <details open>
 <summary>🏆 <b>Achievements</b></summary>
 
-<table>
-<tr align="center">
-<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=FiscalMindset&show_icons=true&theme=radical&hide_title=true" alt="FiscalMindset stats"/></td>
-<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=algsoch&show_icons=true&theme=radical&hide_title=true" alt="algsoch stats"/></td>
-<td><img width="180" src="https://github-readme-stats.vercel.app/api?username=blindfold-org&show_icons=true&theme=radical&hide_title=true" alt="blindfold-org stats"/></td>
-</tr>
-</table>
-
-**🏆 Pull Shark x3** (@FiscalMindset opened pull requests that have been merged) · **YOLO** · **Quickdraw** (< 5 min merge)
+![Coral Hackathon Track 2](https://img.shields.io/badge/1st%20Place-Coral%20Hackathon%20Track%202-F7E05E?style=for-the-badge)
+![Pull Shark x3](https://img.shields.io/badge/Pull%20Shark-x3-30A14E?style=for-the-badge)
+![YOLO](https://img.shields.io/badge/YOLO-Fast%20merge-FF6B6B?style=for-the-badge)
+![Quickdraw](https://img.shields.io/badge/Quickdraw-%3C%205%20min%20merge-FDBC6F?style=for-the-badge)
 
 </details>
 
