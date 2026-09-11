@@ -14,7 +14,7 @@
   </div>
 
   <p style="font-size: 16px; color: #6e7681; max-width: 650px; line-height: 1.6;">
-    Shipping <strong>real AI</strong>, not demos — <strong>on-device agents</strong>, <strong>MCP-powered products</strong>, and <strong>12-language dubbing</strong>.
+    <span style="color: #FF6B6B; font-weight: 600;">Real AI, no cap.</span>
   </p>
 </div>
 
