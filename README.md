@@ -301,7 +301,7 @@ flowchart LR
     SRC[Raw exports<br/>gmail · openai · telegram · zoom] -->|sync-and-rebuild.mjs| DATA[data/raw/&lt;source&gt;]
     DATA -->|build-data.ts + per-source parsers| PIPE[manifests + public/data JSON]
     PIPE -->|generate-og.ts| OG[Per-app OG SVGs]
-    PIPE -->|next build (static export)| OUT[./out · 498 routes]
+    PIPE -->|next build · static export| OUT[./out · 498 routes]
     OG --> OUT
     OUT -->|deploy anywhere| HOST[Render · Vercel · S3 · nginx + Cloudflare]
 ```
@@ -347,10 +347,26 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    AG[AI agent<br/>no keys in env / process / context] -->|sentinel header| P[Blindfold CLI + proxy<br/>register · use · doctor]
-    P -->|authenticated T3 transport| T[Terminal 3<br/>Intel TDX enclave]
-    T -->|secret injected| API[openai.com · GitHub · AWS …]
-    P -->|OS keychain| K[tenant key<br/>~/.blindfold]
+    subgraph DEV["Developer machine — UNTRUSTED"]
+        ENV[".env<br/>no API keys after register"]
+        AGENT["AI agent<br/>no keys in env · process · context"]
+        CHAT["@blindfold/chatbot<br/>rule-based · audience-aware<br/>REPL · web · API"]
+        CLI["blindfold CLI<br/>register · use · proxy · doctor<br/>migrate · rotate · publish"]
+    end
+
+    subgraph T3["🛡️ Terminal 3 node — Intel TDX trust domain"]
+        KV["KV map z:&lt;tenant_did&gt;:secrets<br/>openai · github · twilio · aws …<br/>encrypted at rest in TDX RAM"]
+        FW["contract/src/forward.rs · Rust → WASM<br/>substitutes SENTINEL → secret<br/>http::call → returns response"]
+        FW -->|kv::get secret_key| KV
+    end
+
+    API["api.openai.com · Anthropic<br/>GitHub · AWS SES/S3 · Twilio …"]
+
+    ENV -->|"one-time seal · registerSecret → seedSecret"| CLI
+    AGENT -->|"Authorization: Bearer &lt;sentinel&gt;"| CLI
+    CHAT -->|"dogfoods proxy + sentinel"| CLI
+    CLI -->|"authenticated T3 transport"| FW
+    FW -->|"Bearer · Basic · SigV4 headers"| API
 ```
 
 ### 🤖 vickykumar — algsoch personal AI
