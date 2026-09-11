@@ -14,7 +14,7 @@
   </div>
 
   <p style="font-size: 16px; color: #6e7681; max-width: 650px; line-height: 1.6;">
-    <span style="color: #FF6B6B; font-weight: 600;">Real AI, no cap.</span>
+    <span style="color: #FF6B6B; font-weight: 600;">Built to ship, always.</span>
   </p>
 </div>
 
