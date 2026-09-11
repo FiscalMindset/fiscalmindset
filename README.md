@@ -92,7 +92,7 @@ graph LR
 
 ### 🎬 Video Dubbing — ChitraDub
 
-[**chitradub**](https://github.com/FiscalMindset/chitradub) — Open-Source Video Dubbing Pipeline
+[**chitradub**](https://github.com/FiscalMindset/chitradub) — Video Dubbing Pipeline
 - Paste a **YouTube URL** or upload a video → get a **dubbed MP4 + SRT** back
 - **12 target languages** across **5 source languages** — powered by AI4Bharat
 - Full **12-stage pipeline** with CI, Docker, Release, and pre-commit automation
