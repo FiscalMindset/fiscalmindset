@@ -10,8 +10,9 @@
   <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
     <a href="https://github.com/FiscalMindset"><img src="https://img.shields.io/badge/GitHub-FiscalMindset-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
     <a href="https://github.com/algsoch"><img src="https://img.shields.io/badge/GitHub-algsoch-181717?style=for-the-badge&logo=github" alt="GitHub algsoch"/></a>
+    <a href="https://github.com/blindfold-org"><img src="https://img.shields.io/badge/GitHub-blindfold--org-181717?style=for-the-badge&logo=github" alt="GitHub blindfold-org"/></a>
     <a href="https://www.linkedin.com/in/algsoch"><img src="https://img.shields.io/badge/LinkedIn-algsoch-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/></a>
-    <a href="https://algsochvicky.onrender.com"><img src="https://img.shields.io/badge/Portfolio-View%20Live-FF6B6B?style=for-the-badge" alt="Portfolio"/></a>
+    <a href="https://algsoch.com"><img src="https://img.shields.io/badge/algsoch.com-Live-FF6B6B?style=for-the-badge" alt="algsoch.com"/></a>
   </div>
 
   <p style="font-size: 16px; color: #6e7681; max-width: 650px; line-height: 1.6;">
@@ -28,9 +29,9 @@
 | **Who** | AI Engineer specializing in agentic systems & on-device AI |
 | **What I Build** | Multi-agent pipelines, offline-capable apps, workflow automation |
 | **Stack** | Python · Kotlin · TypeScript · LangGraph · RunAnywhere SDK · Coral |
-| **Open Source** | 12 PRs to Coral MCP |
-| **Achievements** | Pull Shark (22+ PRs merged) · YOLO · Quickdraw (< 5 min merge) |
+| **Open Source** | 14 PRs merged · 20 open · 6 approved — Coral MCP |
 
+| **Achievements** | Pull Shark (170+ PRs merged) · YOLO · Quickdraw (< 5 min merge) |
 ---
 
 ## Philosophy
@@ -131,94 +132,32 @@ flowchart TD
 
 ---
 
-### 🔄 Workflow Automation — autopr & devalert
+### 🎬 Video Dubbing — ChitraDub
 
-[**autopr**](https://github.com/FiscalMindset/autopr) — GitHub → Social Media Orchestration
-- **Kestra** workflows for event-driven automation
-- Generates platform-specific content (LinkedIn, Twitter, Instagram, WhatsApp)
-- Parallel AI generation with Gmail notifications
-- GitHub webhook-triggered, no backend server required
+[**chitradub**](https://github.com/FiscalMindset/chitradub) — Open-Source Video Dubbing Pipeline
+- Paste a **YouTube URL** or upload a video → get a **dubbed MP4 + SRT** back
+- **12 target languages** across **5 source languages** — powered by AI4Bharat
+- Full **12-stage pipeline** with CI, Docker, Release, and pre-commit automation
+- Built with **Python** + **Next.js 15** + **FastAPI** + **Postgres**
 
 ```mermaid
 flowchart LR
-    A[GitHub Webhook] --> B[Kestra Orchestrator]
-    B --> C[AI Content Generation]
-    C --> D1[LinkedIn]
-    C --> D2[Twitter/X]
-    C --> D3[Instagram]
-    C --> D4[WhatsApp]
-    C --> E[Email Notification]
-```
-
-[**devalert**](https://github.com/FiscalMindset/devalert) — LLM-Filtered Opportunity Alerts
-- Aggregates from 6 sources: GitHub, MLH, GSoC, Coral, HN, WeMakeDevs
-- **LLM-powered scoring** with configurable threshold
-- Telegram + Email notifications via Kestra orchestration
-
-```mermaid
-flowchart TD
-    S1[GitHub] --> AGG[Aggregator]
-    S2[MLH] --> AGG
-    S3[GSoC] --> AGG
-    S4[Coral] --> AGG
-    S5[HN] --> AGG
-    S6[WeMakeDevs] --> AGG
-    AGG --> LLM[LLM Filter/Scorer]
-    LLM --> T[Telegram Bot]
-    LLM --> E[Email]
+    A[YouTube URL / Upload] --> B[Transcription]
+    B --> C[Translation]
+    C --> D[TTS Synthesis]
+    D --> E[Timing / Subtitle Sync]
+    E --> F[Dubbed MP4 + SRT]
 ```
 
 ---
 
-### ⏰ Developer Alerts — devalert
+### 🛡️ Secrets Security — Blindfold
 
-[**devalert**](https://github.com/FiscalMindset/devalert) — LLM-Filtered Opportunity Alerts
-- Aggregates from 6 sources: GitHub, MLH, GSoC, Coral, HN, WeMakeDevs
-- **LLM-powered scoring** with configurable threshold
-- Telegram + Email notifications via Kestra orchestration
-
----
-
-### 🧠 LLM Interpretability — Synapse-Graph
-
-[**Synapse-Graph**](https://github.com/FiscalMindset/Synapse-Graph) — AI Autopsy Engine
-- **Neural circuit discovery** — trace which attention heads cause hallucinations
-- **Causal ablation** — O(n²) sweep to isolate defective components
-- **OpenMetadata governance** — tag heads as `DEFECTIVE`, mask at runtime
-- No retraining required — surgical fixes instead of full model updates
-- Built with **PyTorch** + **FastAPI** + **Next.js**
-
-```mermaid
-flowchart LR
-    subgraph Dashboard["🎨 Operator Dashboard"]
-        D["Next.js<br/>React<br/>@xyflow/react"]
-    end
-
-    subgraph Proxy["⚡ Neural Proxy (FastAPI)"]
-        P["Generation + Tracing<br/>Governance + SSE<br/>HeadMaskStore"]
-    end
-
-    subgraph Generation["🔥 Generation"]
-        O["Ollama<br/>(Preferred)"]
-    end
-
-    subgraph Tracing["🔍 Tracing"]
-        T["HF Tracer<br/>PyTorch hooks"]
-    end
-
-    subgraph Governance["🛡️ Governance"]
-        OM["OpenMetadata<br/>Topology + Lineage<br/>Tags → Masks"]
-        DEF["⛔ DEFECTIVE<br/>→ Runtime Mask"]
-    end
-
-    D -->|"REST + SSE"| P
-    P -->|"Generation"| O
-    P -->|"Tracing"| T
-    P -->|"Topology<br/>Lineage<br/>Tags"| OM
-    OM -->|"tag"| DEF
-```
-
-[Demo](https://youtu.be/idOJYh6TUC8) · [Product Demo](https://youtu.be/b78Y7RwvYeU) · [Live Site](https://fiscalmindset.github.io/Synapse-Graph/)
+[**Blindfold**](https://github.com/blindfold-org/Blindfold) — [blindfold-org](https://github.com/blindfold-org) · Live: [blindfold-rho.vercel.app](https://blindfold-rho.vercel.app/)
+- **Your AI agent can't leak the API key it never had** — TDX enclave wrapper
+- Seal and use API keys inside a trusted execution enclave
+- No-paste workflow — verify by fingerprint, never write keys to disk
+- Built with **TypeScript** · Terminal 3 TDX enclave integration
 
 ---
 
@@ -272,16 +211,38 @@ flowchart LR
 |---------|-------------|:-------:|
 | [algsochnews](https://github.com/FiscalMindset/algsochnews) | Multi-agent newsroom with 5 agents + video generation | [FiscalMindset](https://github.com/FiscalMindset) |
 | [careops](https://github.com/FiscalMindset/careops) | Coral-powered family care coordination agent | [FiscalMindset](https://github.com/FiscalMindset) |
-| [Synapse-Graph](https://github.com/FiscalMindset/Synapse-Graph) | LLM interpretability with circuit discovery & causal ablation | [FiscalMindset](https://github.com/FiscalMindset) |
 | [Cognivise](https://github.com/algsoch/Cognivise) | Real-time adaptive tutoring with eye tracking | [algsoch](https://github.com/algsoch) |
-| [assistant_chatbot](https://github.com/algsoch/assistant_chatbot) | TDS problem solver & AI assistant, 55+ solvers | [algsoch](https://github.com/algsoch) |
+| [agentic_chat](https://github.com/FiscalMindset/agentic_chat) | Conversational session history with OpenCode · [Dashboard](https://agentic-dashboard-qzen.onrender.com/) | [FiscalMindset](https://github.com/FiscalMindset) |
+| [vickykumar](https://github.com/FiscalMindset/vickykumar) | algsoch — personal AI chatbot trained on your digital footprint · [Live](https://algsoch.com/) | [FiscalMindset](https://github.com/FiscalMindset) |
 
-### ⚡ Workflow Automation
+### 🎬 Media & Video
 
 | Project | Description | Account |
 |---------|-------------|:-------:|
-| [autopr](https://github.com/FiscalMindset/autopr) | GitHub-to-social media via Kestra workflows | [FiscalMindset](https://github.com/FiscalMindset) |
-| [devalert](https://github.com/FiscalMindset/devalert) | LLM-filtered developer opportunity alerts | [FiscalMindset](https://github.com/FiscalMindset) |
+| [chitradub](https://github.com/FiscalMindset/chitradub) | Video dubbing pipeline — YouTube URL/upload → dubbed MP4 + SRT | [FiscalMindset](https://github.com/FiscalMindset) |
+| [video](https://github.com/FiscalMindset/video) | Reelforge — AI-native web video editor with timeline-based AI agent | [FiscalMindset](https://github.com/FiscalMindset) |
+
+### 🛡️ Security & Privacy
+
+| Project | Description | Account |
+|---------|-------------|:-------:|
+| [Blindfold](https://github.com/blindfold-org/Blindfold) | TDX enclave wrapper — AI agents never see or leak the keys they use | [blindfold-org](https://github.com/blindfold-org) |
+| [footprint](https://github.com/FiscalMindset/footprint) | Personal digital-footprint analytics — static, private, local-first, 12 services | [FiscalMindset](https://github.com/FiscalMindset) |
+
+### 🛠️ Developer Tooling
+
+| Project | Description | Account |
+|---------|-------------|:-------:|
+| [scrapper](https://github.com/FiscalMindset/scrapper) | Scrape-Verse Sentinel — self-healing web context for AI coding agents | [FiscalMindset](https://github.com/FiscalMindset) |
+| [coral_benchmarks](https://github.com/FiscalMindset/coral_benchmarks) | Per-spec query benchmarks for Coral sources · [Live](https://coral-benchmarks.onrender.com) | [FiscalMindset](https://github.com/FiscalMindset) |
+
+### 🌐 Web & Community
+
+| Project | Description | Account |
+|---------|-------------|:-------:|
+| [ghevra](https://github.com/FiscalMindset/ghevra) | Community transparency portal for Ghevra village — EN / Hindi / Haryanvi | [FiscalMindset](https://github.com/FiscalMindset) |
+| [polybazar](https://github.com/algsoch/polybazar) | E-commerce platform | [algsoch](https://github.com/algsoch) |
+| [smart_terminal](https://github.com/algsoch/smart_terminal) | RunAnywhere CommandBrain — offline CLI assistant | [algsoch](https://github.com/algsoch) |
 
 ### 🎓 Education & Language Learning
 
@@ -290,28 +251,137 @@ flowchart LR
 | [english_bot](https://github.com/algsoch/english_bot) | AI conversation practice with speech recognition | [algsoch](https://github.com/algsoch) |
 | [speakai](https://github.com/algsoch/speakai) | On-browser English practice with RunAnywhere WASM | [algsoch](https://github.com/algsoch) |
 
-### 🔬 Machine Learning
+### 🏢 Organisation — blindfold-org
 
-| Project | Description | Account |
-|---------|-------------|:-------:|
-| [brain_tumor](https://github.com/algsoch/brain_tumor) | CNN brain tumor detection from MRI | [algsoch](https://github.com/algsoch) |
-| [brain_tumor_cnn](https://github.com/algsoch/brain_tumor_cnn) | Deep learning tumor classification | [algsoch](https://github.com/algsoch) |
+First GitHub organisation: [**blindfold-org**](https://github.com/blindfold-org)
 
-### 🌐 Web & Miscellaneous
+| Project | Description |
+|---------|-------------|
+| [Blindfold](https://github.com/blindfold-org/Blindfold) | TDX enclave secrets wrapper · [Live](https://blindfold-rho.vercel.app/) |
+| [vickyhairsaloon](https://github.com/blindfold-org/vickyhairsaloon) | Production-grade unisex salon platform |
 
-| Project | Description | Account |
-|---------|-------------|:-------:|
-| [Sentinel Grid](https://github.com/FiscalMindset/women) | Kestra-first emergency response with dispatch orchestration · [Demo](https://youtu.be/rTFPR7DqOBc) | [FiscalMindset](https://github.com/FiscalMindset) |
-| [Kairon](https://github.com/FiscalMindset/Kairon) | NSUT smart attendance chatbot with Playwright scraping | [FiscalMindset](https://github.com/FiscalMindset) |
-| [polybazar](https://github.com/algsoch/polybazar) | E-commerce platform | [algsoch](https://github.com/algsoch) |
-| [accomplish](https://github.com/algsoch/accomplish) | AI desktop agent for file management (contributor) | [algsoch](https://github.com/algsoch) |
-| [smart_terminal](https://github.com/algsoch/smart_terminal) | RunAnywhere CommandBrain — offline CLI assistant | [algsoch](https://github.com/algsoch) |
+---
+
+## Project Architectures
+
+Live mermaid diagrams of the key repos — drawn from each repo's `ARCHITECTURE.md`.
+
+### 🎬 chitradub — Real-Dubbing Pipeline
+
+```mermaid
+flowchart LR
+    A[input video / YouTube URL] --> B[Extract audio + frames]
+    B --> C[ASR + VAD<br/>faster-whisper + Silero]
+    B --> E[Prosody extract<br/>librosa.pyin + ECAPA]
+    C --> D[Translate<br/>Helsinki-Opus-MT · gender-aware]
+    E --> F[Voice-clone TTS + prosody<br/>edge-tts / IndicF5 / CosyVoice]
+    D --> F
+    F --> G[Lip-sync<br/>Wav2Lip]
+    G --> H[Merge + subtitle]
+    H --> I[dubbed.mp4 + SRT]
+```
+
+### 🤖 agentic_chat — agentic-dashboard
+
+```mermaid
+flowchart TB
+    A[(opencode.db<br/>2.4 GB SQLite)] -->|scripts/extract-cli.sh| B[data/stats.json<br/>3.7 MB sanitised]
+    A -.->|cp + split -b 95M| C[.local/opencode.db<br/>26 parts]
+    B -->|committed| D[GitHub repo]
+    C -->|committed| D
+    D -->|webhook| E[Next.js build → out/]
+    E --> F[(agentic-dashboard-qzen<br/>public static)]
+    F --> G[Browser dashboard]
+```
+
+### 🔍 footprint — Digital-Footprint Analytics
+
+```mermaid
+flowchart LR
+    SRC[Raw exports<br/>gmail · openai · telegram · zoom] -->|sync-and-rebuild.mjs| DATA[data/raw/&lt;source&gt;]
+    DATA -->|build-data.ts + per-source parsers| PIPE[manifests + public/data JSON]
+    PIPE -->|generate-og.ts| OG[Per-app OG SVGs]
+    PIPE -->|next build (static export)| OUT[./out · 498 routes]
+    OG --> OUT
+    OUT -->|deploy anywhere| HOST[Render · Vercel · S3 · nginx + Cloudflare]
+```
+
+### 🎥 video — Reelforge Editor
+
+```mermaid
+flowchart LR
+    Project[(Project JSON<br/>single source of truth)] --> Preview[Preview Renderer]
+    Project --> Export[Export Renderer]
+    Project --> AI[AI Agent<br/>same op union + allow-list]
+    Project --> Collab[Collab Engine]
+    Preview --> Pixels[Live Pixels]
+    Export --> MP4[Master MP4]
+```
+
+### 🕷️ scrapper — Scrape-Verse Sentinel
+
+```mermaid
+flowchart LR
+    A[Agent<br/>MCP stdio] -->|schema request| B[Extract<br/>Bright Data + retries]
+    B --> C[Validate<br/>Pydantic + drift]
+    C -->|clean| F[Persist<br/>Postgres + pgvector]
+    C -->|violation| D[Fallback<br/>Gemini + last-known-good]
+    D -->|severity ≥ SEMANTIC| E[Heal<br/>bdata scraper heal]
+    D --> F
+    E --> F
+    F -->|ComponentExtractionPayload| A
+    F -. OpenTelemetry .-> G[SigNoz]
+```
+
+### 🌐 ghevra — Ghevra Citizen Portal
+
+```mermaid
+flowchart TD
+    D[data/ — village · schemes ·<br/>representatives · emergency] --> A[React SPA<br/>37 pages · HashRouter]
+    I[i18n en / hi / hr<br/>localStorage] --> A
+    A -->|HTTPS| R[Render · nginx:1.27 · static dist/]
+    G[git push origin main] --> R
+```
+
+### 🛡️ Blindfold — TDX Secrets Wrapper
+
+```mermaid
+flowchart LR
+    AG[AI agent<br/>no keys in env / process / context] -->|sentinel header| P[Blindfold CLI + proxy<br/>register · use · doctor]
+    P -->|authenticated T3 transport| T[Terminal 3<br/>Intel TDX enclave]
+    T -->|secret injected| API[openai.com · GitHub · AWS …]
+    P -->|OS keychain| K[tenant key<br/>~/.blindfold]
+```
+
+### 🤖 vickykumar — algsoch personal AI
+
+```mermaid
+flowchart LR
+    U[User] --> F[React + Vite frontend]
+    F -->|REST| B[FastAPI backend]
+    B -->|Groq / Ollama| L[Cloud LLM]
+    B -->|Coral SQL| D[(Digital footprint<br/>repos · code · posts · chunks)]
+    B -->|RunAnywhere WASM| O[On-device models]
+    F -->|static build| R[Render<br/>algsoch.com]
+```
+
+### 📊 coral_benchmarks — Coral QA Evidence
+
+```mermaid
+flowchart LR
+    C[catalog.json] -->|required-filters| P[probe_&lt;source&gt;.py]
+    P -->|minimal · realistic · edge| S[coral sql]
+    S -->|rows + latency| R[reports/ tables + history + findings]
+    R --> N[Next.js app]
+    N -->|static export| OUT[app/out]
+    OUT -->|deploy| LIVE[Live site + GitHub Pages mirror]
+```
 
 ---
 
 ## Open Source Contributions
 
-### Coral MCP — 12 PRs Merged
+### Coral MCP — 14 PRs Merged · 20 Open · 6 Approved
 
 Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data abstraction layer for AI agents. Integrated 8 AI providers:
 
@@ -325,6 +395,9 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 | LM Studio | [#834](https://github.com/withcoral/coral/pull/834) | Local model serving |
 | Ollama | [#798](https://github.com/withcoral/coral/pull/798) | Local LLM inference |
 | Groq AI | [#754](https://github.com/withcoral/coral/pull/754) | Fast inference provider |
+
+- **Merged: 14** · **Open: 20** (6 approved, awaiting merge) · **Closed without merge: 2**
+- 13 review comments given across 5 reviewed PRs
 
 [View all PRs →](https://github.com/withcoral/coral/pulls?q=author%3AFiscalMindset)
 
@@ -379,7 +452,7 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 | Achievement | Details |
 |:------------|:--------|
 | **Coral Hackathon Track 2** | 1st place — CareOps agent with 9 Coral sources |
-| **Pull Shark** | 22+ PRs merged on GitHub |
+| **Pull Shark** | 170+ PRs merged on GitHub (14 to Coral MCP) |
 | **YOLO** | Fast merge achievement |
 | **Quickdraw** | < 5 min merge time |
 
@@ -396,10 +469,11 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 | Account | Repos | Stars | PRs Merged | Contributions |
 |:--------|:-----:|:-----:|:----------:|:-------------:|
-| [@FiscalMindset](https://github.com/FiscalMindset) | 20 | 6 | 22 | — |
-| [@algsoch](https://github.com/algsoch) | 107+ | 24+ | 28 | 350+ |
+| [@FiscalMindset](https://github.com/FiscalMindset) | 56 | 6 | 170+ | — |
+| [@algsoch](https://github.com/algsoch) | 104+ | 24+ | 14 | 350+ |
+| [@blindfold-org](https://github.com/blindfold-org) | 2 | — | — | — |
 
-**🏆 Pull Shark** (22+ PRs) · **YOLO** · **Quickdraw** (< 5 min merge)
+**🏆 Pull Shark** (170+ PRs merged) · **YOLO** · **Quickdraw** (< 5 min merge)
 
 ---
 
@@ -409,13 +483,15 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 | Project | Impact | Link |
 |:--------|:-------|:-----|
+| 🎬 **ChitraDub** | YouTube URL / upload → dubbed MP4 + SRT in 12 languages | [GitHub](https://github.com/FiscalMindset/chitradub) |
+| 🛡️ **Blindfold** | AI agents never touch the API keys they use — TDX enclave | [Live](https://blindfold-rho.vercel.app/) |
+| 🤖 **algsoch (AI)** | Personal AI chatbot trained on your digital footprint | [Live](https://algsoch.com/) |
 | 🧠 **CommandBrain** | Offline-first command memory + execution copilot, IndexedDB storage | [Live Demo](https://smart-terminal.onrender.com) |
 | 🎙️ **SpeakAI** | 100% on-device English practice via RunAnywhere WASM | [Live Demo](https://speakai-af1l.onrender.com) |
 | 📱 **algsoch Android** | 100% offline AI, 7 learning modes, RunAnywhere SDK | [GitHub](https://github.com/FiscalMindset/algsoch) |
 | 📺 **algsochnews** | 5-agent pipeline → broadcast video from any article URL | [Live Demo](https://algsochnews-1.onrender.com) |
 | 🏥 **careops** | 9 data sources joined via Coral SQL for family care coordination | [GitHub](https://github.com/FiscalMindset/careops) |
-| 🧠 **Synapse-Graph** | Neural circuit discovery for LLM interpretability | [Live Demo](https://fiscalmindset.github.io/Synapse-Graph/) |
-| 🏥 **Brain Tumor Detection** | 97.9% accuracy CNN model on MRI scans | [Live Demo](https://brain-tumor-mcug.onrender.com/) |
+| 📊 **coral_benchmarks** | Per-spec query benchmarks for every Coral source | [Live](https://coral-benchmarks.onrender.com) |
 
 </div>
 
@@ -459,13 +535,13 @@ HIDDEN SEO LAYER - For AI agents, scrapers, and search crawlers
 <!-- Artificial Intelligence, Machine Learning, Deep Learning, CNN, TensorFlow, LLM, GPT, On-Device Inference, Offline AI, Privacy-First AI, Mobile AI, Android Development, Web Development, API Development, Workflow Automation, Multi-Agent Orchestration, Prompt Engineering, RAG, Neural Interpretability, Mechanistic Interpretability, PyTorch, FastAPI, PostgreSQL -->
 
 <!-- PROJECT TAGS -->
-<!-- algsoch-android-app, RunAnywhere-SDK, SmolLM2, SmolVLM, algsochnews-multi-agent, LangGraph-pipeline, careops-coral-sql, Synapse-Graph-LLM-interpretability, OpenMetadata-governance, autopr-kestra-workflow, devalert-telegram-alerts, Sentinel-Grid-emergency-response, Kairon-attendance-bot, english-bot-ai-tutor, speakai-local-english, commandbrain-command-memory, smart-terminal-indexeddb -->
+<!-- algsoch-android-app, RunAnywhere-SDK, SmolLM2, SmolVLM, algsochnews-multi-agent, LangGraph-pipeline, careops-coral-sql, chitradub-video-dubbing, AI4Bharat, Blindfold-TDX-enclave, footprint-digital-analytics, Reelforge-video-editor, Scrape-Verse-Sentinel, ghevra-transparency-portal, algsoch-personal-AI-chatbot, coral-spec-benchmarks, english-bot-ai-tutor, speakai-local-english, commandbrain-command-memory, smart-terminal-indexeddb, blindfold-org -->
 
 <!-- CONTACT INDEX -->
 <!-- npdimagine@gmail.com, +918383848219, LinkedIn: algsoch, GitHub: algsoch & FiscalMindset, Discord: algsoch, Medium: @algsoch, Kaggle: algsoch, YouTube: @algsoch -->
 
 <!-- EXPERIENCE HIGHLIGHTS -->
-<!-- 12 PRs merged to Coral MCP, 22+ PRs total, 107+ repositories, 350+ contributions, 97.9% accuracy brain tumor detection, 100% offline Android AI app, 5-agent multi-agent pipeline, 9 Coral sources joined, Neural circuit discovery, Causal ablation O(n^2), OpenMetadata tagging, Coral Hackathon Track 2 Winner -->
+<!-- 14 PRs merged to Coral MCP · 20 open · 6 approved, 184+ PRs merged total across accounts, 56+ repositories on FiscalMindset + 104+ on algsoch, 350+ contributions, 100% offline Android AI app, 5-agent multi-agent pipeline, 9 Coral sources joined, 12-language video dubbing pipeline, TDX enclave secrets wrapper, Coral Hackathon Track 2 Winner -->
 
 <!-- PUBLICATIONS -->
 <!-- Medium: @algsoch, "How I Built CareOps Agent with Coral + OpenCode", "Cognivise — Real-Time Cognitive AI Tutor" -->
