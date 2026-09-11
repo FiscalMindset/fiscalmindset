@@ -433,6 +433,8 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 
 ---
 
+<div align="center" style="background-color: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px;">
+
 ## Skills & Tech Stack
 
 ### 🤖 AI Engineering
@@ -541,21 +543,14 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-3FB950?style=flat-square&logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini-3FB950?style=flat-square)
 
-### Awards & Recognition
-
-| Achievement | Details |
-|:------------|:--------|
-| **Coral Hackathon Track 2** | 1st place — CareOps agent with 9 Coral sources |
-| **Pull Shark** | Pull Shark x3 — @FiscalMindset opened pull requests that have been merged |
-| **YOLO** | Fast merge achievement |
-| **Quickdraw** | < 5 min merge time |
-
 ### Languages
 
 | | |
 |:--|:--|
 | **Spoken** | English, Hindi |
 | **Programming** | Python, Kotlin, JavaScript, TypeScript, SQL |
+
+</div>
 
 ---
 
@@ -583,16 +578,6 @@ Contributor to [Coral](https://github.com/withcoral/coral) — SQL-based data ab
 | 🧪 **Data & Analytics** | [footprint](https://github.com/FiscalMindset/footprint) · [coral_benchmarks](https://github.com/FiscalMindset/coral_benchmarks) | Local-first digital-footprint analytics · Coral query benchmarks |
 | 🛠️ **Developer Tooling** | [scrapper](https://github.com/FiscalMindset/scrapper) | Scrape-Verse Sentinel — self-healing web context for coding agents |
 | 🌐 **Web & Community** | [ghevra](https://github.com/FiscalMindset/ghevra) | Community transparency portal — EN / Hindi / Haryanvi |
-
-</details>
-
-<details open>
-<summary>🏆 <b>Achievements</b></summary>
-
-![Coral Hackathon Track 2](https://img.shields.io/badge/1st%20Place-Coral%20Hackathon%20Track%202-F7E05E?style=for-the-badge)
-![Pull Shark x3](https://img.shields.io/badge/Pull%20Shark-x3-30A14E?style=for-the-badge)
-![YOLO](https://img.shields.io/badge/YOLO-Fast%20merge-FF6B6B?style=for-the-badge)
-![Quickdraw](https://img.shields.io/badge/Quickdraw-%3C%205%20min%20merge-FDBC6F?style=for-the-badge)
 
 </details>
 
