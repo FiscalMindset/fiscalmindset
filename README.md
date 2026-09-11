@@ -345,22 +345,43 @@ flowchart TD
 
 ### 🛡️ Blindfold — TDX Secrets Wrapper
 
+[**Blindfold**](https://github.com/blindfold-org/Blindfold) — seal API keys into a **Terminal 3 Intel TDX enclave**, then hand your agent an un-leakable sentinel instead of the real key. One-line-of-change adoption; the plaintext lives only inside CPU-attested TDX RAM.
+
+**The exact workflow (install → login → seal → agent uses it):**
+
+```bash
+npm i -g @fiscalmindset/blindfold          # 1. global CLI, state in ~/.blindfold
+blindfold signup --email you@example.com   # 2. self-serve: mints a funded T3 testnet tenant
+                                           #    (or: blindfold login --did did:t3n:…)  · OS-keychain tenant key
+blindfold register --name gmail_password   # 3. SEAL the key — hidden prompt, never touches disk
+blindfold proxy                            # 4. http://127.0.0.1:8787 · sentinel __BLINDFOLD__
+```
+
+Then tell your agent: *"my Gmail password is sealed in Blindfold — access my email and send one email."* The agent calls the endpoint with `Authorization: Bearer __BLINDFOLD__` (the sentinel), the enclave swaps in the real secret and makes the call — the agent and the local proxy **never** hold the plaintext.
+
+- **`blindfold use --name <key> -- <cmd>`** — release into ONE child command only (e.g. `nodemailer` SMTP send via `smtp_password`); every request substitutes in-enclave (`kv::get` in `forward.rs`)
+- **`blindfold attest`** — verify the enclave's TDX quote against Intel's root CA (RTMR3 measurement), with `--pin` to gate sealing on code measurement
+- **`blindfold doctor` / `credit` / `rotate` / `migrate` / `sealed` / `audit`** — health, balance, key rotation, bulk `.env` → enclave migration
+- Prompt-injection-proof — even if the agent is fully compromised, all it leaks is `__BLINDFOLD__`; the real key never crosses the TDX boundary
+
 ```mermaid
 flowchart LR
     subgraph DEV["Developer machine — UNTRUSTED"]
         ENV[".env<br/>no API keys after register"]
         AGENT["AI agent<br/>no keys in env · process · context"]
         CHAT["@blindfold/chatbot<br/>rule-based · audience-aware<br/>REPL · web · API"]
-        CLI["blindfold CLI<br/>register · use · proxy · doctor<br/>migrate · rotate · publish"]
+        CLI["blindfold CLI<br/>signup · login · register · use · proxy<br/>attest · doctor · rotate · migrate"]
     end
 
-    subgraph T3["🛡️ Terminal 3 node — Intel TDX trust domain"]
-        KV["KV map z:&lt;tenant_did&gt;:secrets<br/>openai · github · twilio · aws …<br/>encrypted at rest in TDX RAM"]
-        FW["contract/src/forward.rs · Rust → WASM<br/>substitutes SENTINEL → secret<br/>http::call → returns response"]
-        FW -->|kv::get secret_key| KV
+    subgraph T3["🛡️ Terminal 3 — Intel TDX trust domain"]
+        KV["Sealed KV map z:&lt;tenant_did&gt;:secrets<br/>gmail · openai · github · twilio · aws …<br/>encrypted at rest in TDX RAM"]
+        FW["contract/src/forward.rs · Rust → WASM<br/>kv::get(secret_key) → substitutes<br/>SENTINEL → secret → http::call"]
+        ATTEST["TDX attestation<br/>Intel root CA · RTMR3 · --pin gate"]
+        FW -->|"reads sealed secret"| KV
+        ATTEST -.->|"verifies quote"| FW
     end
 
-    API["api.openai.com · Anthropic<br/>GitHub · AWS SES/S3 · Twilio …"]
+    API["api.openai.com · Anthropic<br/>GitHub · AWS SES/S3 · smtp.gmail.com …"]
 
     ENV -->|"one-time seal · registerSecret → seedSecret"| CLI
     AGENT -->|"Authorization: Bearer &lt;sentinel&gt;"| CLI
